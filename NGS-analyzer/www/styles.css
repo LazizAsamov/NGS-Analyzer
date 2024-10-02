@@ -1,0 +1,248 @@
+/* General Styles */
+html, body {
+    margin: 0;                /* Remove default margins */
+    padding: 0;               /* Remove default padding */
+    width: 100%;              /* Full width of the viewport */
+    height: 100vh;            /* Full height of the viewport */
+    overflow-x: hidden;       /* Disable horizontal scrolling */
+    overflow-y: hidden;       /* Enable vertical scrolling */
+}
+
+/* Ensures vertical scrolling for body content */
+body {
+    overflow-y: auto !important; 
+}
+
+/* Background image for the main container */
+.container-fluid {
+    background-image: url("dna_bg.jpg") !important;
+    background-size: cover;            /* Ensure the image covers the container */
+    background-position: center;       /* Center the image */
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+/* Upload section styling */
+#upload {
+    overflow-x: hidden;               /* Disable horizontal scrolling */
+    overflow-y: hidden;
+    background-size: cover;           /* Ensure the image covers the entire area */
+    background-position: center;      /* Center the image */
+    width: 100%;
+    height: 90vh;
+    border-radius: 10px;              /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Content area for file input and condition selection */
+.content-body {
+    height: 50vh;                     /* Define height */
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* Two equal columns */
+    justify-content: center;          /* Center grid content horizontally */
+    align-items: center;              /* Center content vertically */
+    gap: 5px;                         /* Spacing between columns */
+    padding: 20px;
+    margin-left: 30%;
+    max-width: 800px; 
+    margin-top: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+/* Navigation Bar (Tabs) Styling */
+ul#TabPanels {
+    position: relative;
+    border-radius: 5px;
+    padding: 10px;
+    list-style-type: none;            /* Remove bullet points */
+    display: flex;                    /* Align items horizontally */
+    gap: 20px;                        /* Space between tabs */
+    justify-content: center;          /* Center nav items */
+    width: 70%;
+    align-items: center;
+    margin: auto;
+    border: 2px solid white !important;
+    border-radius: 40px;
+    border-top: none !important;
+    font-family: 'Times New Roman', Times, serif;
+    backdrop-filter: blur(10px);
+    font-weight: bold;
+}
+
+/* Style for individual navigation items */
+.nav-item {
+    margin-right: 10px; /* Space between items */
+}
+
+/* Style for navigation links */
+.nav-link {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Active and hover states for navigation links */
+.nav-link.active,
+.nav-link:hover {
+    color: rgb(153, 27, 255) !important;
+    border: none;
+    background-color: none !important;
+}
+
+/* Removes default active tab background */
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active {
+    background-color: transparent !important;
+    border-color: transparent;
+}
+
+/* Results section container */
+.content-results {
+    background-color: rgb(27, 140, 221);
+    height: 100%; /* Ensure container doesn't exceed viewport height */
+    overflow-y: auto; /* Allow vertical scroll if content exceeds container */
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+/* Graphs container styling */
+.graphs-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 20px;
+    margin-top: 50px !important;
+}
+
+/* Styling for each card in the graphs container */
+.card_1, .card_2, .card_3, .card_4, .card_5, .card_6 {
+    width: 600px;
+    padding: 10px;
+    height: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Content columns styling */
+.content_1, .content_2 {
+    padding: 3px;
+    border-radius: 10px;
+    width: 90%;
+    color: white;
+}
+
+/* Shiny notification styling */
+.shiny-notification {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 60% !important;
+    max-width: 800px !important;
+    background-color: #FFFFFF !important;
+    border: 3px solid #007BFF !important;
+    border-radius: 10px !important;
+    padding: 40px !important;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2) !important;
+    color: #000000 !important;
+    font-size: 24px !important;
+    z-index: 1050 !important;
+}
+
+/* Shiny progress notification styling */
+.shiny-progress-notification .progress {
+    height: 30px !important;
+    background-color: #f0f0f0 !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+    margin-bottom: 20px !important;
+}
+
+/* Styling for progress bar */
+.shiny-progress-notification .progress-bar {
+    background-color: #a72828 !important;
+    border-radius: 15px !important;
+    transition: width 0.5s ease-in-out !important;
+}
+
+/* Styling for progress text */
+.shiny-progress-notification .progress-text {
+    font-weight: bold !important;
+    color: #007BFF !important;
+    text-align: center !important;
+    font-size: 28px !important;
+}
+
+/* Styling for input groups */
+.input-group {
+    height: 4vh;
+    background-color: white;
+}
+
+.input-group-btn.input-group-prepend {
+    height: 100%;
+}
+
+/* Form control input styling */
+.form-control {
+    background-color: white !important;
+    border: none !important;
+}
+
+/* Styling for buttons within input group */
+.btn.btn-default.btn-file {
+    background-color: white;
+    color: rgb(6, 0, 0);
+    border-radius: 5px;
+    border: none;
+    border-right: 2px solid black;
+}
+
+/* General button styling */
+.btn {
+    margin: 1.5%;
+}
+
+/* DataTable container */
+#cardDT {
+    background-color: rgb(255, 255, 255) !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 5px;
+    margin-bottom: 20px !important;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+}
+
+/* Logo styling */
+#ngs_logo {
+    height: 8vh;
+}
+
+/* Sliders container */
+.sliders {
+    margin: auto;
+    margin-top: 10px;
+}
+
+/* Control label blur effect */
+.control-label {
+    backdrop-filter: blur(20px);
+}

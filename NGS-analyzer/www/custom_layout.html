@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata and Title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RNA-SEQ Pipeline</title>
+
+    <!-- Bootstrap CSS for styling and layout -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Additional head content from Shiny -->
+    {{ headContent() }}
+</head>
+
+<body>
+<div class="container-fluid">
+    
+    <!-- Shiny JavaScript functionality -->
+    {{ShinyJS}}
+
+    <!-- TAB NAVIGATION -->
+    <ul class="nav nav-tabs" id="TabPanels" role="tablist">
+        
+        <!-- Logo Section -->
+        <li class="nav-item">
+            <img id="ngs_logo" src="NGS_P.png" alt="NGS_logo">
+        </li>
+        
+        <!-- Upload Tab -->
+        <li class="nav-item">
+            <a class="nav-link active" id="tab-upload" data-toggle="tab" href="#upload" role="tab">Upload</a>
+        </li>
+        
+        <!-- Results Tab -->
+        <li class="nav-item">
+            <a class="nav-link" id="tab-results" data-toggle="tab" href="#results" role="tab">Results</a>
+        </li>
+    </ul>
+    
+    <!-- Tab Content -->
+    <div class="tab-content" id="main-content"> 
+        
+        <!-- Upload Section -->
+        <div class="tab-pane fade show active" id="upload" role="tabpanel">
+            <div class="content-body"> 
+                
+                <!-- Column for Number Input and Condition Inputs -->
+                <div class="content_1">
+                    {{NumInput}}
+                    {{ConditionUI}}
+                </div>
+                
+                <!-- Column for File Uploads -->
+                <div class="content_2">
+                    {{FileUI}}
+                </div>
+
+            </div>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="tab-pane fade" id="results" role="tabpanel">
+            <div class="content-results">
+                
+                <!-- Data Table Section with Sliders -->
+                <div class="datatables html-widget html-widget-output shiny-bound-output" id="cardDT"> 
+                    {{BTAB}}
+                    
+                    <!-- P-value and Log2FC Sliders -->
+                    <div class="sliders">
+                        {{SliderPvalue}}
+                        {{SliderLog2F}}
+                    </div>
+                </div>
+                
+                <!-- Graphs Container for Sorting and Visualization -->
+                <div class="graphs-container" id="sortable_container">
+                    <div class="card_1">
+                        {{p_his}}
+                    </div>
+                    <div class="card_2">
+                        {{disp_plt}}
+                    </div>
+                    <div class="card_3">
+                        {{plt_volcano}}
+                    </div>
+                    <div class="card_4" id="card_4">
+                        {{pca_plt}}
+                    </div>
+                    <div class="card_5" id="card_5">
+                        {{GeneSelect}}
+                        {{count_plt}}
+                    </div>
+                    <div class="card_6" id="card_6">
+                        {{heat_plt}}
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS for interactive elements -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
