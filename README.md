@@ -1,12 +1,22 @@
 <h1> NGS-Analyzer Web App</h1>
-<p> At this early stage of developement, <b><i>NGS-Analyzer Web Application</i></b> is capable of running RNA-seq pipline on bacteria samplse using BWA for indexing and mapping and FeatureCounts to produce count matrix and provide interactive output for downstream analysis using DESeq2.</P>
+<p> At this early stage of development, the <b><i>NGS-Analyzer Web Application</i></b> is capable of running an RNA-seq pipeline on bacterial samples, utilizing BWA for indexing and mapping, and FeatureCounts to generate a count matrix. The application also provides interactive output for downstream analysis with DESeq2.</p>
 <hr>
 <h3>File upload</h3>
-<p>The app requires to provide amount of conditions (ex. Treated, Untreated) and submit samples for each conditions. It is important that all pair-ended files follow naming patterng Prefix follored by _r1.fastq or _r2.fastq (ex. Sample_r1.fastq, Sample_r2.fastq). The app also requires to provide sequenced genome and annotation files.</p>
-![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/6e32117f-3240-472c-aafe-0c4d7f94b67f)
+<p>The app requires specifying the number of conditions (e.g., Treated, Untreated) and submitting samples for each condition. It is important that all paired-end files follow a naming pattern: a prefix followed by _r1.fastq or _r2.fastq (e.g., Sample_r1.fastq, Sample_r2.fastq). Additionally, the app requires providing sequenced genome and annotation files.</p>
+
+<div align="center">
+
+  ![ezgif com-video-to-gif-converter (2)](https://github.com/user-attachments/assets/4b1284ee-8150-48be-bec7-ff0947275aa5)
+
+</div>
 
 <hr>
 <h3>Results panel</h3>
-<p>After the pipline is done running it will take a user to results pannel for interactive analysis where user can explpre differentially expressed genes by adjust Log2FoldChange and p-value.</p>
-<img src = 'https://drive.google.com/uc?export=view&id=1bey_rMbKHLpXHIRvSf0Ys-d3aF3HHZic' alt = 'Visualization tools page: Heatmap'>
+<p>Once the pipeline has finished running, the user will be directed to the results panel for interactive analysis. Here, users can explore differentially expressed genes by adjusting the Log2FoldChange and p-value.</p>
 
+<div align="center">
+
+  ![RESULTS-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/b8362103-9732-415b-92e7-be4c4de0b755)
+
+
+</div>
