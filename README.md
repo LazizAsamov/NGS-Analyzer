@@ -3,7 +3,7 @@
 <hr>
 <h3>File upload</h3>
 <p>The app requires to provide amount of conditions (ex. Treated, Untreated) and submit samples for each conditions. It is important that all pair-ended files follow naming patterng Prefix follored by _r1.fastq or _r2.fastq (ex. Sample_r1.fastq, Sample_r2.fastq). The app also requires to provide sequenced genome and annotation files.</p>
-<img src = 'https://drive.google.com/uc?export=view&id=1PQ4c23XhkKfMhXEXv3UDQ5hdazrfG1q6' alt = 'Visualization tools page: Scatter Plot'>
+![ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/6e32117f-3240-472c-aafe-0c4d7f94b67f)
 
 <hr>
 <h3>Results panel</h3>
